@@ -253,17 +253,7 @@ pip install pandas numpy scikit-learn xgboost imbalanced-learn shap matplotlib s
 
 ---
 
-## ⭐ Contributions
 
-Pull requests, issues, and suggestions are always welcome! Feel free to:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
 
 ## 📜 License
 
@@ -273,15 +263,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+**Muhammadjon**
+- GitHub: [github](https://github.com/MuhammadjonR)
+- LinkedIn: [Linkedin](https://www.linkedin.com/in/muhammadjon-raxmataliyev-56381b236/)
 
 ---
 
 ## 🙏 Acknowledgments
 
-- Dataset: [Source if applicable]
+
 - Inspired by various e-commerce churn prediction research
 - SHAP library for model interpretability
 
