@@ -15,27 +15,6 @@ Predicting customer churn is crucial for e-commerce businesses aiming to retain 
 
 ---
 
-## 📁 Project Structure
-
-```
-├── data/
-│   └── ecommerce_churn.csv
-│
-├── notebooks/
-│   ├── 01_EDA.ipynb
-│   ├── 02_Modelling.ipynb
-│
-├── models/
-│   ├── final_xgboost_model.pkl
-│   ├── xgb_preprocessing_pipeline.pkl
-│
-├── plots/
-│   ├── shap_summary_plot.png
-│
-└── README.md
-```
-
----
 
 ## 📊 Dataset Overview
 
