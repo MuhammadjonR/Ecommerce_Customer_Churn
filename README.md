@@ -17,7 +17,7 @@ Predicting customer churn is crucial for e-commerce businesses aiming to retain 
 
 
 ## 📊 Dataset Overview
-
+![](https://github.com/MuhammadjonR/Ecommerce_Customer_Churn/blob/main/heatmap.png)
 The dataset contains customer behavior and engagement features such as:
 
 - **Tenure**: Duration of customer relationship
