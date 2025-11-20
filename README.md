@@ -1,6 +1,6 @@
 # E-Commerce Customer Churn Prediction
 
-![Python](https://github.com/MuhammadjonR/Ecommerce_Customer_Churn/blob/main/XGBoost%20confusion%20Matrix.png)
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Machine Learning](https://img.shields.io/badge/ML-XGBoost-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
@@ -150,6 +150,7 @@ weighted avg       0.95      0.95      0.95       789
  [ 23 112]]
 ```
 
+![](https://github.com/MuhammadjonR/Ecommerce_Customer_Churn/blob/main/XGBoost%20confusion%20Matrix.png)
 ✅ The model achieves **97% precision** on active customers and **83% recall** on churned customers.
 
 ---
