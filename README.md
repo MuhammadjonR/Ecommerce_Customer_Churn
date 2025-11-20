@@ -1,171 +1,180 @@
-📦 E-Commerce Customer Churn Prediction
+🛒 E-Commerce Customer Churn Prediction
+End-to-End Machine Learning Project with Explainability & Business Insights
+📌 Table of Contents
 
-This project builds a complete end-to-end machine learning pipeline to predict churn in an e-commerce business.
-It includes EDA, outlier analysis, feature engineering, SMOTE balancing, model training, hyperparameter tuning, and SHAP explainability.
+📖 Project Overview
 
+📂 Dataset Description
 
+🧹 Data Cleaning
 
-📊 Dataset Overview
+📊 Exploratory Data Analysis (EDA)
 
-The dataset contains customer behavioral, demographic, and purchasing features such as:
+🧩 Feature Engineering
 
-Tenure
+⚖️ Handling Imbalance (SMOTE)
 
-WarehouseToHome
+🤖 Model Development
 
-NumberOfDeviceRegistered
+🎯 Hyperparameter Tuning (XGBoost)
 
-DaySinceLastOrder
+📈 Model Evaluation
 
-CashbackAmount
+🧠 Explainability (SHAP)
 
-SatisfactionScore
+🏢 Business Insights
 
-Churn (target)
+📊 Power BI Dashboard
 
-Churn Distribution
-0 → 82.9%  
-1 → 17.1%
+📦 Project Structure
 
+🚀 How to Run
 
-The dataset is highly imbalanced, so SMOTE was applied during model training.
+📜 License
 
-🔍 Exploratory Data Analysis (EDA)
+📖 Project Overview
 
-Key analysis steps:
+(Bu yerga keyin matn qo‘yamiz.)
 
-Missing value inspection
+📂 Dataset Description
 
-Outlier detection using IQR
+(Sarlavhalar tayyor — matn keyin.)
 
-Distribution plots and boxplots
+🧹 Data Cleaning
+- Missing values
+- Outliers
+- Inconsistent records
+- Data types fixes
+📊 Exploratory Data Analysis (EDA)
+Univariate Analysis
+
+Numerical distributions
+
+Categorical counts
+
+Bivariate Analysis
+
+Churn vs Tenure
+
+Churn vs Satisfaction
+
+Churn vs Cashback
+
+Multivariate Analysis
 
 Correlation heatmap
 
-Churn vs numerical & categorical features
+Pairplots
 
-Business insights discovery
+Boxplots
 
-Outlier Summary
-Tenure: 4  
-WarehouseToHome: 1  
-NumberOfDeviceRegistered: 271  
-DaySinceLastOrder: 223  
-CashbackAmount: 316  
+Visualizations
 
-🧹 Preprocessing & Feature Engineering
+Bar charts
 
-Performed using ColumnTransformer + Pipeline:
+KDE plots
 
-Numerical
+Pie charts
 
-IQR outlier clipping
+Donut charts
 
-Standard scaling
+Histograms
 
-Categorical
+🧩 Feature Engineering
 
-One-Hot Encoding
+Creating new behavioral features
 
-Feature Engineering
+Transformations
 
-Created meaningful features such as:
+Encoding categorical variables
 
-RecencyLevel
+⚖️ Handling Imbalance (SMOTE)
 
-ActivityRatio
+Before/After distribution
 
-CashbackEfficiency
+Why SMOTE
 
-All transformations are included inside a reproducible pipeline.
+Visual confirmation
 
-⚖️ Handling Class Imbalance (SMOTE)
+🤖 Model Development
+Models Tested:
 
-Applied only to the training set to prevent data leakage:
+Logistic Regression
 
-smote = SMOTE(random_state=42)
-X_resampled, y_resampled = smote.fit_resample(X_train_transformed, y_train)
+Decision Tree
 
-🤖 Models Trained & Compared
-Model	ROC-AUC
-Logistic Regression	0.894
-Decision Tree	0.844
-Random Forest	0.958
-Gradient Boosting	0.930
-SVM	0.905
-XGBoost (best)	0.9597
-🎛 Hyperparameter Tuning (GridSearchCV)
+Random Forest
 
-Best XGBoost parameters:
+Gradient Boosting
 
-{
- 'model__subsample': 0.9,
- 'model__n_estimators': 200,
- 'model__min_child_weight': 1,
- 'model__max_depth': 6,
- 'model__learning_rate': 0.2,
- 'model__gamma': 0,
- 'model__colsample_bytree': 0.9
-}
+SVM
 
-📈 Final Model Performance
-ROC-AUC: 0.9623
-Classification Report
-precision    recall  f1-score   support
+XGBoost
 
-0       0.97      0.97      0.97       654
-1       0.86      0.83      0.85       135
+🎯 Hyperparameter Tuning (XGBoost)
+
+RandomizedSearchCV
+
+Best parameters table
+
+📈 Model Evaluation
+Metrics:
+
+Accuracy
+
+Recall
+
+Precision
+
+F1-Score
+
+ROC-AUC Curve
 
 Confusion Matrix
-[[636  18]
- [ 23 112]]
 
-📝 Explainability (SHAP)
+🧠 Explainability (SHAP)
+Visuals:
 
-A complete SHAP analysis was performed to understand feature contributions.
+SHAP Summary Plot
 
-The summary plot is saved at:
+SHAP Bar Plot
 
-plots/shap_summary_plot.png
+SHAP Force Plot
 
+🏢 Business Insights
+- High-risk customer behaviors
+- Retention strategies
+- Revenue impact analysis
+- Operational recommendations
+📊 Power BI Dashboard
 
-Example code used:
+Churn overview
 
-fig = plt.gcf()
-fig.savefig("plots/shap_summary_plot.png", dpi=300, bbox_inches="tight")
-plt.close(fig)
+Customer segments
 
+High-risk clusters
 
-SHAP helps identify:
+Tenure insights
 
-Most important churn drivers
+Satisfaction heatmap
 
-Feature effect direction
+(Bu bo‘lim uchun rasm qo‘yish joyi)
 
-Customer-level explanations
+![Dashboard](images/dashboard.png)
 
-💾 Saving the Model
-import joblib
+📦 Project Structure
+📁 ecom-churn-project
+│── 📂 data
+│── 📂 notebooks
+│── 📂 models
+│── 📂 images
+│── README.md
+│── requirements.txt
 
-joblib.dump(best_model, "models/final_xgboost_model.pkl")
-joblib.dump(preprocessor, "models/xgb_preprocessing_pipeline.pkl")
+🚀 How to Run
 
-📌 Key Business Insights
+(Keyin to‘ldiramiz.)
 
-Customers with high recency (DaySinceLastOrder) are far more likely to churn.
+📜 License
 
-Higher cashback reduces churn likelihood.
-
-Low tenure customers churn at significantly higher rates.
-
-Device registration behavior has nonlinear patterns captured well by XGBoost.
-
-🚀 Next Steps (Future Work)
-
-Add FastAPI model deployment
-
-Build a Streamlit dashboard
-
-Perform A/B testing for retention strategies
-
-Integrate model outputs into CRM systems
+MIT License
