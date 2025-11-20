@@ -1,6 +1,6 @@
 # E-Commerce Customer Churn Prediction
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Python](https://github.com/MuhammadjonR/Ecommerce_Customer_Churn/blob/main/XGBoost%20confusion%20Matrix.png)
 ![Machine Learning](https://img.shields.io/badge/ML-XGBoost-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
